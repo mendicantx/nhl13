@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Nhl13::Application.config.secret_token = '65e0f31077cec16b9ca151234bdf965430641e511706bc54290e7150cef819e030458a497f5253846692784c15c18ff25106a149859973e616467a3553063eb2'
+Nhl13::Application.config.secret_token = 'd866018e1eaa5efe1a13cf2ec403df3139434eae56cc8c8fe68d135f4d7c0882759ae7819aa69c8a349f0e9b354d3a392d4911a36069071c1b59248088d64ea9'
