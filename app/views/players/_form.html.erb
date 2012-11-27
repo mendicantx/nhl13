@@ -1,0 +1,89 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_id %><br />
+    <%= f.select :team_id, Team.all.collect {|team| [team.name, team.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :sotw %><br />
+    <%= f.check_box :sotw %>
+  </div>
+  <div class="field">
+    <%= f.label :ps3_bin %><br />
+    <%= f.number_field :ps3_bin %>
+  </div>
+  <div class="field">
+    <%= f.label :ps3_auction %><br />
+    <%= f.number_field :ps3_auction %>
+  </div>
+  <div class="field">
+    <%= f.label :xbox_bin %><br />
+    <%= f.number_field :xbox_bin %>
+  </div>
+  <div class="field">
+    <%= f.label :xbox_auction %><br />
+    <%= f.number_field :xbox_auction %>
+  </div>
+  <div class="field">
+    <%= f.label :skate_high %><br />
+    <%= f.number_field :skate_high %>
+  </div>
+  <div class="field">
+    <%= f.label :shot_low %><br />
+    <%= f.number_field :shot_low %>
+  </div>
+  <div class="field">
+    <%= f.label :hand_quick %><br />
+    <%= f.number_field :hand_quick %>
+  </div>
+  <div class="field">
+    <%= f.label :check_position %><br />
+    <%= f.number_field :check_position %>
+  </div>
+  <div class="field">
+    <%= f.label :defense_rebound %><br />
+    <%= f.number_field :defense_rebound %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :overall %><br />
+    <%= f.number_field :overall %>
+  </div>
+  <div class="field">
+    <%= f.label :true_overall %><br />
+    <%= f.text_field :true_overall %>
+  </div>
+  <div class="field">
+    <%= f.label :player_type %><br />
+    <%= f.text_field :player_type %>
+  </div>
+  <div class="field">
+    <%= f.label :handed %><br />
+    <%= f.text_field :handed %>
+  </div>
+  <div class="field">
+    <%= f.label :salary %><br />
+    <%= f.text_field :salary %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

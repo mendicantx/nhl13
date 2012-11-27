@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team:</b>
+  <%= @player.team.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @player.name %>
+</p>
+
+<p>
+  <b>SOTW:</b>
+  <%= @player.sotw %>
+</p>
+
+<p>
+  <b>Ps3 BIN:</b>
+  <%= @player.ps3_bin %>
+</p>
+
+<p>
+  <b>Ps3 Auction:</b>
+  <%= @player.ps3_auction %>
+</p>
+
+<p>
+  <b>Xbox BIN:</b>
+  <%= @player.xbox_bin %>
+</p>
+
+<p>
+  <b>Xbox Auction:</b>
+  <%= @player.xbox_auction %>
+</p>
+
+<p>
+  <b>Skate/High:</b>
+  <%= @player.skate_high %>
+</p>
+
+<p>
+  <b>Shot/Low:</b>
+  <%= @player.shot_low %>
+</p>
+
+<p>
+  <b>Hand/Quick:</b>
+  <%= @player.hand_quick %>
+</p>
+
+<p>
+  <b>Check/Position:</b>
+  <%= @player.check_position %>
+</p>
+
+<p>
+  <b>Defense/Rebound:</b>
+  <%= @player.defense_rebound %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @player.position %>
+</p>
+
+<p>
+  <b>Overall:</b>
+  <%= @player.overall %>
+</p>
+
+<p>
+  <b>True Overall:</b>
+  <%= @player.true_overall %>
+</p>
+
+<p>
+  <b>Player Type:</b>
+  <%= @player.player_type %>
+</p>
+
+<p>
+  <b>Handed:</b>
+  <%= @player.handed %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @player.salary %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  team: 
+  name: MyString
+  sotw: false
+  ps3_bin: 1
+  ps3_auction: 1
+  xbox_bin: 1
+  xbox_auction: 1
+  skate_high: 1
+  show_low: 1
+  hand_quick: 1
+  check_position: 1
+  defense_rebound: 1
+  position: MyString
+  overall: 1
+  true_overall: 1.5
+  player_type: MyString
+  handed: MyString
+  salary: 
+
+two:
+  team: 
+  name: MyString
+  sotw: false
+  ps3_bin: 1
+  ps3_auction: 1
+  xbox_bin: 1
+  xbox_auction: 1
+  skate_high: 1
+  show_low: 1
+  hand_quick: 1
+  check_position: 1
+  defense_rebound: 1
+  position: MyString
+  overall: 1
+  true_overall: 1.5
+  player_type: MyString
+  handed: MyString
+  salary: 
