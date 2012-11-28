@@ -16,3 +16,4 @@
 //= require jquery.ui.all
 //= require jquery.event.drag
 //= require slick
+//= require slick/formatters
