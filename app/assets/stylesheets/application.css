@@ -10,11 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require "slick/grid"
- *= require "slick/editors"
- *= require "slick/remotemodel"
- *= require "slick/default-theme"
-
+ *= require jquery-tablesorter/theme.blue
 */
 
 

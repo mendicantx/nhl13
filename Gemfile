@@ -6,11 +6,10 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'slickgrid-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'jquery-drag-rails'
-
+gem 'rails-backbone'
+gem 'jquery-tablesorter'
 
 
 # Gems used only for assets and not required

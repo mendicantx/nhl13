@@ -1,6 +1,9 @@
-<h1>Listing players</h1>
-
-<div id="players_table">
+<div id="players">
 </div>
 
-<%= link_to 'New Player', new_player_path %>
+<script type="text/javascript">
+  $(function() {
+      window.router = new Nhl13.Routers.PlayersRouter();
+      Backbone.history.start();
+      });
+</script>

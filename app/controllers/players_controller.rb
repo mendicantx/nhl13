@@ -1,5 +1,3 @@
-require 'players_table'
-
 class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
@@ -8,7 +6,7 @@ class PlayersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: PlayersTable.new(@players).as_json }
+      format.json { render json: @players.as_json(:include=>[:team]) }
     end
   end
 
