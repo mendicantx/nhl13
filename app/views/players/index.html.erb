@@ -22,6 +22,7 @@
       <th>True OVR</th>
       <th>Salary</th>
       <th></th>
+      <th></th>
       <% if @show_deletes %>
       <th></th>
       <% end %>
@@ -49,6 +50,7 @@
         <td><%= player.true_overall %></td>
         <td><%= player.salary %></td>
 
+        <td><%= link_to 'Show', player_path(player) %></td>
         <td><%= link_to 'Edit', edit_player_path(player) %></td>
         <% if @show_deletes %>
           <td><%= link_to 'Delete', player_path(player), { :method => :delete, :confirm => "Are you sure you want to delete #{player.name}" } %></td>
