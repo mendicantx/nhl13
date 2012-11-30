@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player: 
+  ps3_bin: 1
+  ps3_auction: 1
+  xbox_bin: 1
+  xbox_auction: 1
+  ip_address: MyString
+
+two:
+  player: 
+  ps3_bin: 1
+  ps3_auction: 1
+  xbox_bin: 1
+  xbox_auction: 1
+  ip_address: MyString

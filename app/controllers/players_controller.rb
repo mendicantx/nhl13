@@ -1,10 +1,11 @@
 class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
+  before_filter :set_show_deletes
+
   def index
     @players = Player.all(:include => :team)
 
-    @show_deletes = true unless params[:show_deletes].nil?
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,6 +44,7 @@ class PlayersController < ApplicationController
   # POST /players.json
   def create
     @player = Player.new(params[:player])
+    @player.update_for_save(request)
 
     respond_to do |format|
       if @player.save
@@ -61,7 +63,7 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
 
     @player.assign_attributes(params[:player])
-    @player.update_overall
+    @player.update_for_save(request)
 
     respond_to do |format|
       if @player.save
@@ -84,5 +86,10 @@ class PlayersController < ApplicationController
       format.html { redirect_to players_url }
       format.json { head :no_content }
     end
+  end
+
+protected
+  def set_show_deletes
+    @show_deletes = true unless params[:show_deletes].nil?
   end
 end

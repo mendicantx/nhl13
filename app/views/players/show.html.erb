@@ -1,95 +1,160 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Team:</b>
-  <%= @player.team.name %>
-</p>
+<table class="show_player_table">
+  <tr>
+    <td>
+      <b>Team:</b>
+    </td>
+    <td>
+      <%= @player.team.name %>
+    </td>
+    <td>
+      <b>Name:</b>
+    </td>
+    <td>
+      <%= @player.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>SOTW:</b>
+    </td>
+    <td>
+      <%= @player.sotw %>
+    </td>
+    <td>
+      <b>Handed:</b>
+    </td>
+    <td>
+      <%= @player.handed %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Ps3 BIN:</b>
+    </td>
+    <td>
+      <%= @player.ps3_bin %>
+    </td>
+    <td>
+      <b>Ps3 Auction:</b>
+    </td>
+    <td>
+      <%= @player.ps3_auction %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Xbox BIN:</b>
+    </td>
+    <td>
+      <%= @player.xbox_bin %>
+    </td>
+    <td>
+      <b>Xbox Auction:</b>
+    </td>
+    <td>
+      <%= @player.xbox_auction %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Skate/High:</b>
+    </td>
+    <td>
+      <%= @player.skate_high %>
+    </td>
+    <td>
+      <b>Shot/Low:</b>
+    </td>
+    <td>
+      <%= @player.shot_low %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Hand/Quick:</b>
+    </td>
+    <td>
+      <%= @player.hand_quick %>
+    </td>
+    <td>
+      <b>Check/Position:</b>
+    </td>
+    <td>
+      <%= @player.check_position %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Defense/Rebound:</b>
+    </td>
+    <td>
+      <%= @player.defense_rebound %>
+    </td>
+    <td>
+      <b>Position:</b>
+    </td>
+    <td>
+      <%= @player.position %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Overall:</b>
+    </td>
+    <td>
+      <%= @player.overall %>
+    </td>
+    <td>
+      <b>True Overall:</b>
+    </td>
+    <td>
+      <%= @player.true_overall %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Player Type:</b>
+    </td>
+    <td>
+      <%= @player.player_type %>
+    </td>
+    <td>
+      <b>Salary:</b>
+    </td>
+    <td>
+      <%= @player.salary %>
+    </td>
+  </tr>
+</table>
+<br />
+<br />
 
-<p>
-  <b>Name:</b>
-  <%= @player.name %>
-</p>
-
-<p>
-  <b>SOTW:</b>
-  <%= @player.sotw %>
-</p>
-
-<p>
-  <b>Ps3 BIN:</b>
-  <%= @player.ps3_bin %>
-</p>
-
-<p>
-  <b>Ps3 Auction:</b>
-  <%= @player.ps3_auction %>
-</p>
-
-<p>
-  <b>Xbox BIN:</b>
-  <%= @player.xbox_bin %>
-</p>
-
-<p>
-  <b>Xbox Auction:</b>
-  <%= @player.xbox_auction %>
-</p>
-
-<p>
-  <b>Skate/High:</b>
-  <%= @player.skate_high %>
-</p>
-
-<p>
-  <b>Shot/Low:</b>
-  <%= @player.shot_low %>
-</p>
-
-<p>
-  <b>Hand/Quick:</b>
-  <%= @player.hand_quick %>
-</p>
-
-<p>
-  <b>Check/Position:</b>
-  <%= @player.check_position %>
-</p>
-
-<p>
-  <b>Defense/Rebound:</b>
-  <%= @player.defense_rebound %>
-</p>
-
-<p>
-  <b>Position:</b>
-  <%= @player.position %>
-</p>
-
-<p>
-  <b>Overall:</b>
-  <%= @player.overall %>
-</p>
-
-<p>
-  <b>True Overall:</b>
-  <%= @player.true_overall %>
-</p>
-
-<p>
-  <b>Player Type:</b>
-  <%= @player.player_type %>
-</p>
-
-<p>
-  <b>Handed:</b>
-  <%= @player.handed %>
-</p>
-
-<p>
-  <b>Salary:</b>
-  <%= @player.salary %>
-</p>
-
+<table class="show_history_table">
+  <tr>
+    <th>PS3 BIN</th>
+    <th>PS3 AUC</th>
+    <th>XBox BIN</th>
+    <th>XBox AUC</th>
+    <th>Date</th>
+    <% if @show_deletes %>
+      <th></th>
+    <% end %>
+  </tr>
+  <% @player.salary_histories.each do |salary| %>
+    <tr>
+      <td><%= salary.ps3_bin %></td>
+      <td><%= salary.ps3_auction %></td>
+      <td><%= salary.xbox_bin %></td>
+      <td><%= salary.xbox_auction %></td>
+      <td><%= salary.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+      <% if @show_deletes %>
+        <td>Delete goes here</td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

@@ -13,9 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-tablesorter
-//= require underscore
-//= require backbone
-//= require backbone_rails_sync
-//= require backbone_datalink
-//= require backbone/nhl13
 //= require_tree .
