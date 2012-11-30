@@ -8,7 +8,6 @@ gem 'rails', '3.2.3'
 gem 'pg'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'rails-backbone'
 gem 'jquery-tablesorter'
 
 
