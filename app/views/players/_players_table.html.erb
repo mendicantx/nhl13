@@ -1,0 +1,63 @@
+<table id="players-table">
+  <thead>
+    <tr>
+      <th class='filter-select'>Team</th>
+      <th>Name</th>
+      <th class='filter-select'>SOTW</th>
+      <th class='filter-select'>POS</th>
+      <th class='filter-select'>Type</th>
+      <th class='filter-select'>Hand</th>
+      <th>PS3 BIN</th>
+      <th>PS3 AUC</th>
+      <th>XBox BIN</th>
+      <th>XBox AUC</th>
+      <th>SKT/HGH</th>
+      <th>SHT/LOW</th>
+      <th>HND/QCK</th>
+      <th>CHK/POS</th>
+      <th>DEF/RBD</th>
+      <th>OVR</th>
+      <th>True OVR</th>
+      <th>Salary</th>
+      <th>Last Update</th>
+      <th></th>
+      <th></th>
+      <% if @show_deletes %>
+      <th></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% players.each do |player| %>
+      <tr>
+        <td><%= player.team.name %></td>
+        <td><%= player.name %></td>
+        <td><%= player.sotw %></td>
+        <td><%= player.position %></td>
+        <td><%= player.player_type %></td>
+        <td><%= player.handed %></td>
+        <td class="ps3"><%= player.ps3_bin %></td>
+        <td class="ps3"><%= player.ps3_auction %></td>
+        <td class="xbox"><%= player.xbox_bin %></td>
+        <td class="xbox"><%= player.xbox_auction %></td>
+        <td><%= player.skate_high %></td>
+        <td><%= player.shot_low %></td>
+        <td><%= player.hand_quick %></td>
+        <td><%= player.check_position %></td>
+        <td><%= player.defense_rebound %></td>
+        <td><%= player.overall %></td>
+        <td><%= player.true_overall %></td>
+        <td><%= player.salary %></td>
+        <td><%= player.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
+
+        <td><%= link_to 'Show', player_path(player) %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <% if @show_deletes %>
+          <td><%= link_to 'Delete', player_path(player), { :method => :delete, :confirm => "Are you sure you want to delete #{player.name}" } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
