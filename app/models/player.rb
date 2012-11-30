@@ -13,7 +13,7 @@ private
   def update_overall
     average = (self.check_position.to_f + self.defense_rebound.to_f + self.hand_quick.to_f + self.shot_low.to_f + self.skate_high.to_f) / 5.0
 
-    self.overall = average.to_i
+    self.overall = average.round.to_i
     self.true_overall = average
 
   end
