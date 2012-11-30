@@ -2,7 +2,7 @@ Nhl13::Application.routes.draw do
   resources :players
   resources :teams
 
-  root :to => 'players#index'
+  root :to => 'teams#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
