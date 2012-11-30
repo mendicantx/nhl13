@@ -12,75 +12,67 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :team_id %><br />
+    <%= f.label :team_id %>
     <%= f.select :team_id, Team.all.collect {|team| [team.name, team.id]} %>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :sotw %><br />
+    <%= f.label :sotw, 'SOTW' %>
     <%= f.check_box :sotw %>
   </div>
   <div class="field">
-    <%= f.label :ps3_bin %><br />
+    <%= f.label :position, 'POS' %>
+    <%= f.select :position, ['C', 'LW', 'RW', 'LD', 'RD', 'G'] %>
+  </div>
+  <div class="field">
+    <%= f.label :player_type, 'Type' %>
+    <%= f.select :player_type, ['SNP', 'PLY', 'PWF', 'TWF', 'GRN', 'OFD', 'DFD', 'TWD', 'BUT', 'HYB', 'STD'] %>
+  </div>
+  <div class="field">
+    <%= f.label :handed %>
+    <%= f.select :handed, ['Left', 'Right'] %>
+  </div>
+  <div class="field">
+    <%= f.label :ps3_bin, 'PS3 BIN' %>
     <%= f.number_field :ps3_bin %>
   </div>
   <div class="field">
-    <%= f.label :ps3_auction %><br />
+    <%= f.label :ps3_auction, 'PS3 AUC' %>
     <%= f.number_field :ps3_auction %>
   </div>
   <div class="field">
-    <%= f.label :xbox_bin %><br />
+    <%= f.label :xbox_bin, 'XBox BIN' %>
     <%= f.number_field :xbox_bin %>
   </div>
   <div class="field">
-    <%= f.label :xbox_auction %><br />
+    <%= f.label :xbox_auction, 'XBox AUC' %>
     <%= f.number_field :xbox_auction %>
   </div>
   <div class="field">
-    <%= f.label :skate_high %><br />
+    <%= f.label :skate_high, 'SKT/HGH' %>
     <%= f.number_field :skate_high %>
   </div>
   <div class="field">
-    <%= f.label :shot_low %><br />
+    <%= f.label :shot_low, 'SHT/LOW' %>
     <%= f.number_field :shot_low %>
   </div>
   <div class="field">
-    <%= f.label :hand_quick %><br />
+    <%= f.label :hand_quick, 'HND/QCK' %>
     <%= f.number_field :hand_quick %>
   </div>
   <div class="field">
-    <%= f.label :check_position %><br />
+    <%= f.label :check_position, 'CHK/POS' %>
     <%= f.number_field :check_position %>
   </div>
   <div class="field">
-    <%= f.label :defense_rebound %><br />
+    <%= f.label :defense_rebound, 'DEF/RBD' %>
     <%= f.number_field :defense_rebound %>
   </div>
   <div class="field">
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :overall %><br />
-    <%= f.number_field :overall %>
-  </div>
-  <div class="field">
-    <%= f.label :true_overall %><br />
-    <%= f.text_field :true_overall %>
-  </div>
-  <div class="field">
-    <%= f.label :player_type %><br />
-    <%= f.text_field :player_type %>
-  </div>
-  <div class="field">
-    <%= f.label :handed %><br />
-    <%= f.text_field :handed %>
-  </div>
-  <div class="field">
-    <%= f.label :salary %><br />
+    <%= f.label :salary %>
     <%= f.text_field :salary %>
   </div>
   <div class="actions">

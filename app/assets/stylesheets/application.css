@@ -13,4 +13,15 @@
  *= require jquery-tablesorter/theme.blue
 */
 
+label { 
+   display: block;
+   float: left;
+   width: 90px; }
 
+.field select {
+  width: 150px;
+}
+
+.field input {
+  width: 150px;
+}

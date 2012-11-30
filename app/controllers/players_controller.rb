@@ -4,6 +4,8 @@ class PlayersController < ApplicationController
   def index
     @players = Player.all(:include => :team)
 
+    @show_deletes = true unless params[:show_deletes].nil?
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @players.as_json(:include=>[:team]) }
@@ -58,8 +60,11 @@ class PlayersController < ApplicationController
   def update
     @player = Player.find(params[:id])
 
+    @player.assign_attributes(params[:player])
+    @player.update_overall
+
     respond_to do |format|
-      if @player.update_attributes(params[:player])
+      if @player.save
         format.html { redirect_to @player, notice: 'Player was successfully updated.' }
         format.json { head :no_content }
       else
