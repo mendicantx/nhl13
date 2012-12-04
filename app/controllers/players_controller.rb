@@ -89,7 +89,7 @@ class PlayersController < ApplicationController
   end
 
   def recent
-    @players = Player.includes(:team).where('updated_at > ?', 1.day.ago)
+    @players = Player.includes(:team).where('updated_at > ?', 1.day.ago).order('updated_at desc')
 
 
     respond_to do |format|
