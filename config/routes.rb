@@ -1,6 +1,9 @@
 Nhl13::Application.routes.draw do
+  match '/players/recent' => 'players#recent'
+
   resources :players
   resources :teams
+
 
   root :to => 'teams#index'
 

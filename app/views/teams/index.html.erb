@@ -1,6 +1,10 @@
 <h1>Select a Team</h1>
 
+<%= link_to 'Recently Updated Players', '/players/recent' %>
+<br/>
+<br/>
 <%= link_to 'All Teams', players_path %>
+<br/>
 <br/>
 <% @teams.each do |team| %>
   <%= link_to team.name, team_path(team) %>

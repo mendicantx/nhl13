@@ -88,6 +88,16 @@ class PlayersController < ApplicationController
     end
   end
 
+  def recent
+    @players = Player.includes(:team).where('updated_at > ?', 1.day.ago)
+
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @players.as_json(:include=>[:team]) }
+    end
+  end
+
 protected
   def set_show_deletes
     @show_deletes = true unless params[:show_deletes].nil?
