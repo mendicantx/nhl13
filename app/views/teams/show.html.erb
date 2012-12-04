@@ -1,3 +1,6 @@
 <h1><%= @team.name %></h1>
 
 <%= render :partial => 'players/players_table', :locals => {:players => @team.players }  %>
+
+<%= link_to 'New Player', new_player_path %>
+
