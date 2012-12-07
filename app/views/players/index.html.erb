@@ -1,10 +1,7 @@
 <h1>Listing players</h1>
 
-<%= link_to "View Teams", teams_path %>
-<br/>
-
 <%= render :partial => 'players_table', :locals => {:players => @players } %>
 <br/>
 
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'New Player', new_player_path, :class => 'btn' %>
 

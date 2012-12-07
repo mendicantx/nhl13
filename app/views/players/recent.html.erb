@@ -1,10 +1,7 @@
 <h1>Recently Updated Players</h1>
 
-<%= link_to "Teams Page", teams_path %>
-<br/>
-
 <%= render :partial => 'players_table', :locals => {:players => @players } %>
 <br/>
 
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'New Player', new_player_path, :class => 'btn'%>
 

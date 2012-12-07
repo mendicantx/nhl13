@@ -50,8 +50,8 @@
         <td><%= player.salary %></td>
         <td><%= player.updated_at.strftime("%Y-%m-%d %H:%M") %> EST</td>
 
-        <td><%= link_to 'Show', player_path(player) %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <td><%= link_to 'Show', player_path(player), :class => 'btn' %></td>
+        <td><%= link_to 'Edit', edit_player_path(player), :class => 'btn' %></td>
         <% if @show_deletes %>
           <td><%= link_to 'Delete', player_path(player), { :method => :delete, :confirm => "Are you sure you want to delete #{player.name}" } %></td>
         <% end %>
